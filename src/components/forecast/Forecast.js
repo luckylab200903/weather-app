@@ -7,9 +7,10 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import Shimmer from "./Shimmer";
 
 const Forecast = ({ data }) => {
-  console.log(data);
+  console.log('Forecast data:', data);
   const weekdays = [
     "Monday",
     "Tuesday",
@@ -23,13 +24,14 @@ const Forecast = ({ data }) => {
   const forecastDays = weekdays
     .slice(weekdayNumber, weekdays.length)
     .concat(weekdays.slice(0, weekdayNumber));
-  console.log(forecastDays);
+  console.log('Forecast days:', forecastDays);
 
   return (
     <div>
+    
       <label className="title">Upcoming Days</label>
       <Accordion allowZeroExpanded>
-        {data.list.slice(0, 7).map((item, idx) => (
+        {data ? data.list.slice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
             <AccordionItemHeading>
               <AccordionItemButton>
@@ -55,7 +57,9 @@ const Forecast = ({ data }) => {
             </AccordionItemHeading>
             <AccordionItemPanel></AccordionItemPanel>
           </AccordionItem>
-        ))}
+        )) : (
+          <Shimmer />
+        )}
       </Accordion>
     </div>
   );
