@@ -1,0 +1,70 @@
+.title {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .daily-item {
+    background-color: #2196F3;
+    border-radius: 10px;
+    height: auto;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .daily-item:hover {
+    background-color: #1976D2;
+  }
+  
+  .day {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-weight: 700;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .desc {
+    color: white;
+    flex: 2;
+    text-align: left;
+  }
+  
+  .feels-like,
+  .temp_max,
+  .temp_min {
+    color: white;
+    margin: 0 15px;
+    text-align: right;
+    flex: 1;
+  }
+  
+  .small-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .accordion__button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .accordion__panel {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
